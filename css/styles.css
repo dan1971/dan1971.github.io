@@ -159,11 +159,60 @@ body {
             letter-spacing: 2px;
             text-align: left;
         }
+
+        .glass-card {
+            display: grid;
+            grid-template-columns: 62% auto;
+            grid-column-gap: 43px;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+           margin-right: 24px;
+            color: #fff;
+            font-size: 1.2rem;
+            font-family: Arial, sans-serif;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-align: left;  
+          background: rgba(255, 255, 255, 0.2);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          border-radius: 12px;
+          padding: 20px;
+          background-image: url("../images/aurora-borealis-northern-lights.jpg");
+          background-position: 0;
+          background-size: 100%;
+            background-color: linear-gradient(90deg, rgba(255,255,255,0.6) 0%, rgba(0,0,0,0.4) 50%, rgba(255,255,255,0.6) 100%);
+          background-blend-mode: lighdarken;
+          background-repeat: no-repeat;
+        }
+
+         .glass-card::before {
+              content: "";
+              position: absolute;
+              top: 0; left: 0; right: 0; bottom: 0;
+              /* Diagonal semi-transparent stripes */
+              background: repeating-linear-gradient(
+                135deg,
+                rgba(255,255,255,0.08) 0px,
+                rgba(255,255,255,0.08) 16px,
+                rgba(255,255,255,0.18) 32px,
+                rgba(255,255,255,0.08) 48px
+              );
+              background-size: 100% 200%;
+              animation: shimmer-stripes-2 2.5s linear infinite;
+              pointer-events: none;
+              z-index: 1;
+              mix-blend-mode: overlay;
+              opacity:0
+         }
+
       .card-section {
           max-width: 600px;
           margin: 40px auto;
           padding: 12px;
         }
+
       .card-section h1 {
         text-align: center;
       }
@@ -329,6 +378,29 @@ body {
   transform: translateY(-2px) scale(1.04);
 }
 
+.glass-card .button {
+  position: relative;
+  z-index: 1;
+  /* optional: add some margin-bottom if needed */
+}
+
+.glass-card .button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 80%;
+  background: inherit;
+  border-radius: inherit;
+  opacity: 0.25;
+  filter: blur(2px) grayscale(0.2);
+  transform: scaleY(-1);
+  pointer-events: none;
+  z-index: 0;
+  
+}
 .menu-container {
     display: flex;
     width:100%;
@@ -507,6 +579,17 @@ justify-content: center;
   }
 }
 
+@keyframes shimmer-stripes-2 {
+  0% {
+    opacity:1;
+    background-position: 0 100%;
+  }
+  100% {
+    opacity:1;
+    background-position: 0 2.5%;
+  }
+}
+
 .card-3-title{
   color: #fff;
   filter: invert(0);
@@ -532,3 +615,6 @@ justify-content: center;
     font-weight: 600;
   }
 }
+
+
+
