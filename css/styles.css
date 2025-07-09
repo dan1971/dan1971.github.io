@@ -41,7 +41,7 @@ body {
         }
 
         button {
-          font-size: .9rem;
+          font-size: .7rem;
         }
         .center-me {
           align-self: center;
@@ -180,12 +180,32 @@ body {
           border-radius: 12px;
           padding: 20px;
           background-image: url("../images/aurora-borealis-northern-lights.jpg");
+            background-size: cover;
+            background-position: center;
+              background-image:url("../images/aurora-borealis-northern-lights.jpg"), url("../images/aurora-borealis-northern-lights.jpg"), url("../images/aurora-borealis-northern-lights.jpg"), url("../images/aurora-borealis-northern-lights.jpg"), url("../images/aurora-borealis-northern-lights.jpg"), url("../images/aurora-borealis-northern-lights.jpg");
+              background-size: 200%, 80%, 60%, 50%, 40%, 100%;
+              background-position: 50%, 80%, 30%, 0;
+              background-blend-mode: darken;
+              background-repeat: no-repeat;
+          /* background-image: url("../images/aurora-borealis-northern-lights.jpg");
           background-position: 0;
           background-size: 100%;
             background-color: linear-gradient(90deg, rgba(255,255,255,0.6) 0%, rgba(0,0,0,0.4) 50%, rgba(255,255,255,0.6) 100%);
-          background-blend-mode: lighdarken;
+          background-blend-mode: lighdarken; */
           background-repeat: no-repeat;
         }
+
+          .collage-effect {
+            background-image: url("../images/aurora-borealis-northern-lights.jpg");
+            background-size: cover;
+            background-position: center;
+              background-image:url("../images/aurora-borealis-northern-lights.jpg"), url("../images/aurora-borealis-northern-lights.jpg"), url("../images/aurora-borealis-northern-lights.jpg"), url("../images/aurora-borealis-northern-lights.jpg"), url("../images/aurora-borealis-northern-lights.jpg"), url("../images/aurora-borealis-northern-lights.jpg");
+              background-size: 200%, 80%, 60%, 50%, 40%, 100%;
+              background-position: 50%, 80%, 30%, 0;
+              background-blend-mode: overlay;
+              background-repeat: no-repeat;
+            }
+          }
 
          .glass-card::before {
               content: "";
@@ -245,6 +265,7 @@ body {
   flex-direction: column;
   align-items: center;
   transition: box-shadow 0.2s;
+  position: relative;
 }
 
 .card-card:hover {
@@ -300,8 +321,8 @@ body {
 }   
 
 .css-button-arrow--sky {
-  min-width: 130px;
-  height: 35px;
+  min-width:89px;
+  height: 24px;
   color: #fff;
   padding: 5px 10px;
   cursor: pointer;
@@ -334,12 +355,31 @@ body {
   position: absolute;
   opacity: 0;
   font-size: 20px;
-  line-height: 32px;
+  line-height: 20px;
   top: 0;
   right: -20px;
   transition: 0.4s;
   color:67bc45;
 }
+
+.css-button-arrow--sky--small {
+  min-width: 130px;
+  height: 35px;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  border-radius: 5px;
+  border: none;
+  background: linear-gradient(91deg,rgba(0, 55, 117, 1) 44%, rgb(15, 176, 225) 62%);
+  background-size: 250% 100%;
+  background-position: left;
+}
+
 
 .button {
   padding: 12px 28px;
@@ -614,6 +654,18 @@ justify-content: center;
     text-decoration: none;
     font-weight: 600;
   }
+}
+
+.glass-card button,
+.glass-card .css-button-arrow--sky,
+.glass-card .css-button-arrow--sky--small {
+  box-shadow: 0 0 12px 2px #008dff, 0 0 0 0 transparent;
+}
+
+.glass-card button:hover,
+.glass-card .css-button-arrow--sky:hover,
+.glass-card .css-button-arrow--sky--small:hover {
+  box-shadow: none !important;
 }
 
 
