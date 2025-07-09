@@ -51,12 +51,12 @@ body {
             margin: 0 auto;
             height: 100vh;
             margin: 0 0 35px;
-        }
         .page-container {
             width: 86%;
             margin: 0 0 35px;
             background: #020024;
             background: linear-gradient(159deg,rgba(0, 26, 56, 1) 0%, rgba(5, 151, 255, 1) 60%, rgba(199, 221, 240, 1) 90%);
+
             padding: 32px;
             border-radius: 0 20px 20px 0;
             align-items:center;   
@@ -193,6 +193,33 @@ body {
             background-color: linear-gradient(90deg, rgba(255,255,255,0.6) 0%, rgba(0,0,0,0.4) 50%, rgba(255,255,255,0.6) 100%);
           background-blend-mode: lighdarken; */
           background-repeat: no-repeat;
+        }
+
+        
+        .glass-card-no-repeat {
+            display: grid;
+            grid-template-columns: 62% auto;
+            grid-column-gap: 43px;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+           margin-right: 24px;
+            color: #fff;
+            font-size: 1.2rem;
+            font-family: Arial, sans-serif;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-align: left;  
+          background: rgba(255, 255, 255, 0.2);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          border-radius: 12px;
+          padding: 20px;
+          /* background-image: url("../images/aurora-borealis-northern-lights.jpg");
+            background-size: cover;
+            background-position: center;
+              */
+
         }
 
           .collage-effect {
@@ -394,7 +421,7 @@ body {
   font-size: .9rem;
   cursor: pointer;
   display: inline-block;
-  box-shadow: 0 2px 12px rgba(0,81,168,0.10);
+  box-shadow: 0 0px 12px rgba(190, 190, 190, 0.1);
   letter-spacing: 0.04em;
   transition: 
     background-position 0.4s cubic-bezier(.4,0,.2,1),
@@ -535,12 +562,12 @@ body {
         }
         
 .card-2-col {
-    width:90%;
+    width:80%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
   align-items: stretch;
-  margin:75px auto 48px;
+  margin:12px auto 32px;
 }
 
 .card-2-col > div {
@@ -551,7 +578,7 @@ body {
 
 }
 .card-2-col > div:nth-child(2) {
-  align-items: center;
+  /* align-items: center; */
   justify-content: flex-end; /* Top align content */
 }
 .features {
@@ -585,7 +612,6 @@ justify-content: center;
   background-size: 100%;
   background-repeat: no-repeat;
   position: relative;
-  overflow: hidden;
 }
 
 .card-3::before {
@@ -606,6 +632,13 @@ justify-content: center;
   z-index: 1;
   mix-blend-mode: overlay;
   opacity:0
+}
+
+.card-3-hero {
+  background: rgba(8, 14, 20, 0.45); /* semi-transparent dark overlay */
+  border-radius: 14px;
+  padding: 32px 24px;
+  position: relative;
 }
 
 @keyframes shimmer-stripes {
@@ -659,13 +692,59 @@ justify-content: center;
 .glass-card button,
 .glass-card .css-button-arrow--sky,
 .glass-card .css-button-arrow--sky--small {
-  box-shadow: 0 0 12px 2px #008dff, 0 0 0 0 transparent;
+  box-shadow: 0 0 12px 0px #d3d3d3, 0 0 0 0 transparent;
 }
 
 .glass-card button:hover,
 .glass-card .css-button-arrow--sky:hover,
 .glass-card .css-button-arrow--sky--small:hover {
   box-shadow: none !important;
+}
+
+.card-2 {
+  padding: 32px 24px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  
+}
+.card-2 .logo-container-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+}
+.card-2 .menu-container {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.card-2-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  /* padding: 24px 0; */
+}
+.card-2 .actions {
+  display: flex;
+  gap: 12px;
+}
+.card-2 .features {
+  background: rgba(255,255,255,0.7);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 24px;
+}
+.card-2 .brands {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+.card-2 .brands img {
+  height: 32px;
 }
 
 
