@@ -137,7 +137,7 @@ body {
             background: #fff;
             box-shadow: 4px 3px 24px rgba(0, 0, 0, 0.369);
             border-radius: 10px;
-            padding: 11px 20px;
+            /* padding: 11px 20px; */
             margin-right: 24px;
             text-align: left;
         }
@@ -161,12 +161,12 @@ body {
         }
 
         .glass-card {
-            display: grid;
+            /* display: grid;
             grid-template-columns: 62% auto;
-            grid-column-gap: 43px;
+            grid-column-gap: 43px; */
             align-items: center;
             justify-content: center;
-            padding: 24px;
+            /* padding: 24px; */
            margin-right: 24px;
             color: #fff;
             font-size: 1.2rem;
@@ -178,7 +178,7 @@ body {
           backdrop-filter: blur(10px);
           border: 1px solid rgba(255, 255, 255, 0.3);
           border-radius: 12px;
-          padding: 20px;
+          /* padding: 20px; */
           background-image: url("../images/aurora-borealis-northern-lights.jpg");
             background-size: cover;
             background-position: center;
@@ -247,7 +247,7 @@ body {
                 rgba(255,255,255,0.08) 48px
               );
               background-size: 100% 200%;
-              animation: shimmer-stripes-2 2.5s linear infinite;
+              /* animation: shimmer-stripes-2 2.5s linear infinite; */
               pointer-events: none;
               z-index: 1;
               mix-blend-mode: overlay;
@@ -306,13 +306,10 @@ body {
     cursor: pointer;
   background: linear-gradient(180deg, #fff 80%, #f3e8ff 100%);
   border-radius: 20px;
-  padding: 32px 10px 24px 10px; /* top:32px, right:0, bottom:24px, left:0 */
+  padding: 32px 10px 22px; /* top:32px, right:0, bottom:24px, left:0 */
   width: 100%;
-  height:100%
+  height:100%;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   transition: box-shadow 0.2s;
   position: relative;
 }
@@ -329,7 +326,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 160px;
+  height: 124px;
   overflow: hidden;
   position: relative;
 
@@ -430,6 +427,7 @@ body {
 }
 
 
+
 .button {
   padding: 12px 28px;
   background: linear-gradient(90deg, #0537ff 0%, #149400 100%);
@@ -457,6 +455,17 @@ body {
 .button.small {
   padding: 10px 22px;
   font-size: .8rem;
+}
+
+.card-card-action {
+  min-width:79px;
+  height: 20px;
+
+}
+
+.card-card-action::after{
+    font-size: 18px;
+    line-height: 18px;
 }
 
 .button:hover, .button:focus {
@@ -583,14 +592,7 @@ body {
             margin-bottom: 8px;
         }
         
-.card-2-col {
-    width:80%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  align-items: stretch;
-  margin:12px auto 32px;
-}
+
 
 .card-2-col > div {
   height: 100%;
@@ -649,7 +651,7 @@ justify-content: center;
     rgba(255,255,255,0.08) 48px
   );
   background-size: 100% 200%;
-  animation: shimmer-stripes 2.5s linear infinite;
+  /* animation: shimmer-stripes 2.5s linear infinite; */
   pointer-events: none;
   z-index: 1;
   mix-blend-mode: overlay;
@@ -714,7 +716,7 @@ justify-content: center;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 16px;
+  padding-bottom: 13px;
 }
 .card-2 .menu-container {
   display: flex;
@@ -727,7 +729,7 @@ justify-content: center;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  /* padding: 24px 0; */
+  padding: 0 9px;
 }
 .card-2 .actions {
   display: flex;
