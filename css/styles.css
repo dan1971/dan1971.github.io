@@ -254,6 +254,28 @@ body {
               opacity:0
          }
 
+         @keyframes shimmer-stripes {
+          0% {
+            opacity:1;
+            background-position: 0 200%;
+          }
+          100% {
+            opacity:1;
+            background-position: 0 100%;
+          }
+        }
+
+        @keyframes shimmer-stripes-2 {
+          0% {
+            opacity:1;
+            background-position: 0 100%;
+          }
+          100% {
+            opacity:1;
+            background-position: 0 2.5%;
+          }
+        }
+
       .card-section {
           max-width: 600px;
           margin: 40px auto;
@@ -641,27 +663,7 @@ justify-content: center;
   position: relative;
 }
 
-@keyframes shimmer-stripes {
-  0% {
-    opacity:1;
-    background-position: 0 100%;
-  }
-  100% {
-    opacity:1;
-    background-position: 0 2.5%;
-  }
-}
 
-@keyframes shimmer-stripes-2 {
-  0% {
-    opacity:1;
-    background-position: 0 100%;
-  }
-  100% {
-    opacity:1;
-    background-position: 0 2.5%;
-  }
-}
 
 .card-3-title{
   color: #fff;
